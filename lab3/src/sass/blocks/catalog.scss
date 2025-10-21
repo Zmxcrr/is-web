@@ -1,0 +1,136 @@
+@use "/src/sass/base/variables.scss" as *;
+@use "/src/sass/base/mixins.scss" as *;
+
+.catalog {
+	padding-top: 60px;
+}
+
+.catalog__menu {
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 50px;
+	row-gap: 15px;
+	border: 1px solid $dark;
+	padding: 15px 25px;
+	margin-top: 60px;
+}
+
+.catalog__wrapper {
+	margin-top: 60px;
+}
+
+.catalog__content {
+	display: flex;
+	flex-direction: column;
+	row-gap: 20px;
+}
+
+.catalog__btn {
+	position: relative;
+	border: none;
+	background: none;
+	padding: 0;
+	font-size: $font-size-3;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+
+.catalog__btn-active::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 1px;
+	background-color: #000;
+	bottom: -1px;
+}
+
+.catalog__item {
+	box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.catalog__item-img {
+	width: 100%;
+}
+
+.catalog__item-label {
+	padding: 13px;
+	border: 1px solid $dark;
+	border-top: none;
+}
+
+.catalog__item-name {
+	font-size: $font-size-2;
+	font-weight: 500;
+}
+
+.catalog__item-price {
+	margin-top: 10px;
+	font-size: $font-size-2;
+	font-weight: 500;
+}
+
+@media (min-width: $breakpoint-sm) {
+	.catalog__wrapper {
+		padding: 10px;
+		position: relative;
+	}
+
+	.catalog__content {
+		row-gap: 20px;
+		column-gap: 20px;
+		align-items: flex-start;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+
+	.catalog__menu {
+		width: 459px;
+	}
+
+	.catalog__wrapper::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: $dark;
+		width: 1px;
+		height: 200px;
+	}
+	.catalog__wrapper::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: $dark;
+		width: 200px;
+		height: 1px;
+	}
+
+	.catalog__item {
+		width: 340px;
+	}
+
+	.catalog__item-img {
+		height: 198px;
+	}
+}
+
+@media (min-width: $breakpoint-md) {
+	.catalog__wrapper {
+		padding: 25px;
+	}
+	.catalog__content {
+		gap: 35px;
+	}
+}
+
+@media (min-width: $breakpoint-xl) {
+	.catalog__content {
+		row-gap: 80px;
+		column-gap: 80px;
+	}
+
+	.catalog__item {
+		min-height: 250px;
+	}
+}
