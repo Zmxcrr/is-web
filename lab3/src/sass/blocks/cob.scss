@@ -1,0 +1,66 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.cob {
+	padding-top: 60px;
+}
+
+.cob__wrapper {
+	margin-top: 20px;
+	row-gap: 40px;
+	display:flex;
+	flex-flow:row wrap;
+	align-content:flex-start
+}
+
+.cob__img {
+	width: 100%;
+	margin-top: 40px;
+	box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.cob__text {
+	margin-block-start: 20px;
+	color: $dark;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: normal;
+}
+
+@media (min-width: $breakpoint-sm) {
+	.cob {
+		padding: 60px 90px 0 90px;
+	}
+
+	.cob__text {
+		margin-block-start: 25px;
+		font-size: 20px;
+	}
+}
+
+@media screen and (min-width: $breakpoint-md) {
+	.cob {
+		padding: 60px 0 0 0;
+	}
+
+	.cob__wrapper {
+		margin-top: 80px;
+	}
+
+	.cob__img {
+		margin-top: 60px;
+	}
+
+	.cob__col-1 {
+		width: 40%;
+		padding: 0 10px;
+	}
+
+	.cob__col-2 {
+		padding: 0 10px;
+		width: 60%;
+	}
+
+	.cob__text-fixed {
+		inline-size: 540px;
+	}
+}

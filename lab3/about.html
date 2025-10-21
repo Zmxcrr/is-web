@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="Website for Ceramic soul brand" />
+		<meta name="author" content="Awesome student" />
+		<title>About</title>
+		<link rel="icon" type="image/x-icon" href="favicon.ico" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;1,400&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<section class="info">
+			<div class="container">
+				<header class="header">
+					<div class="header__main">
+						<div class="burger"><span></span><span></span><span></span></div>
+						<a href="index.html" class="header__logo"><img src="/src/logo/logo.png" alt="logo"/></a>
+						<div class="header__icons">
+							<a href="#"><img src="src/img/icons/search-outline.png"></a>
+							<a href="#"><img src="src/img/icons/shopping-bag.png"></a>
+						</div>
+					</div>
+					<div class="header__menu">
+						<img src="src/img/icons/X.png" alt="close menu" class="header__close-btn" >
+						<nav class="header__menu-nav">
+							<ul>
+								<li><a href="catalog.html" class="header__link">catalog</a></li>
+								<li><a href="blog.html" class="header__link">blog</a></li>
+								<li><a href="about.html" class="header__link">about</a></li>
+							</ul>
+						</nav>
+					</div>
+				</header>
+
+				<h2 class="section__title">where it all began</h2>
+
+				<div class="info__content">
+					<img src="/src/img/about/crafts.jpg" alt="crafts" class="info__img"/>
+					<div class="info__text">
+						<p>
+							Our small pottery workshop began as a simple passion project,
+							rooted in a love for handmade artistry and traditional
+							craftsmanship. What started with a single wheel and a few lumps of
+							clay has grown into a cozy creative space where ideas take shape
+							and stories are told through every piece. Inspired by timeless
+							techniques and the beauty of natural materials, we’ve built a
+							place where both beginners and experienced artists can come
+							together, share their skills, and celebrate the art of pottery.
+							Each creation reflects our journey—shaped by hand, fired with
+							care, and made to be cherished.
+						</p>
+						<br/>
+						<p>
+							Over the years, our workshop has become more than just a place to
+							create—it’s a community. Friends, families, and curious visitors
+							gather here to learn, connect, and experience the joy of working
+							with clay. From intimate masterclasses to collaborative projects,
+							we believe in the power of handmade art to bring people together
+							and spark creativity in unexpected ways.
+						</p>
+						<br/>
+						<p>
+							Every piece that leaves our studio carries a bit of our story,
+							blending tradition with personal expression. Whether it’s a simple
+							cup or an intricate vase, our ceramics are crafted to be both
+							beautiful and functional, adding warmth and authenticity to any
+							space.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="form">
+			<div class="container">
+				<h2 class="section__title">get in touch</h2>
+				<div class="form__content-wrapper">
+					<div class="form__img-wrapper">
+						<img class="form__img" src="/src/img/form/tea.jpg" alt="tea" />
+					</div>
+					<div class="form__wrapper">
+						<form class="form__main" action="#">
+							<div class="form__input-wrapper">
+								<div class="form__block">
+									<label class="form__label" for="name">Name</label>
+									<input class="form__input" type="text" id="name" name="name" placeholder="Name" required/>
+									<div class="error-message name-error"></div>
+								</div>
+								<div class="form__block">
+									<label class="form__label" for="email">Email</label>
+									<input class="form__input" type="email" id="email" name="email" placeholder="Email" required/>
+									<div class="error-message email-error"></div>
+								</div>
+							</div>
+							<label class="form__label" for="question">Your question</label>
+							<textarea class="form__textarea" name="question" id="question" placeholder="Question" required></textarea>
+							<div class="error-message question-error"></div>
+
+							<label class="form__label form__label-fixed" for="checkbox">
+								<input required class="form__checkbox" type="checkbox" id="checkbox"/>
+								I agree with the <a href="#">terms</a>
+							</label>
+							<div class="error-message terms-error"></div>
+
+							<button class="form__send-btn">send request</button>
+						</form>
+					</div>
+				</div>
+				<img src="/src/img/form/vase.png" alt="vase" class="form__decor" />
+			</div>
+		</section>
+
+		<section class="find">
+			<div class="container">
+				<h2 class="section__title">find us</h2>
+				<div class="find__wrapper">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2335.670496470313!2d30.31771704725783!3d59.96959030576931!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696315aacf73315%3A0x424a8c9c934c219d!2z0JDQv9C10LvRjNGB0LjQvQ!5e0!3m2!1sru!2sru!4v1760993644225!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+				</div>
+			</div>
+		</section>
+
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__wrapper">
+					<div class="footer__newsletter">
+						<h4>newsletter</h4>
+						<div class="footer__text">Keep up to date with news and promotions</div>
+						<form class="footer__form" novalidate>
+							<label for="footer-email"></label>
+							<input placeholder="Enter your e-mail" id="footer-email" type="email" class="footer__input" required/>
+							<div class="email-error-message"></div>
+							<label class="footer__checkbox-text" for="footer-checkbox">
+								<input required class="footer__checkbox" type="checkbox" id="footer-checkbox"/>
+								I agree with the <a href="#">terms</a>
+							</label>
+							<div class="check-error-message"></div>
+							<button class="footer__form-btn">submit</button>
+						</form>
+					</div>
+					<div class="footer__links">
+						<div>
+							<h4>discover</h4>
+							<nav>
+								<ul>
+									<li class="footer__link"><a href="about.html">About Us</a></li>
+									<li class="footer__link"><a href="blog.html">Blog</a></li>
+								</ul>
+							</nav>
+						</div>
+						<div>
+							<h4>shopping</h4>
+							<nav>
+								<ul>
+									<li class="footer__link"><a href="catalog.html">Catalog</a></li>
+								</ul>
+							</nav>
+						</div>
+						<div>
+							<h4>information</h4>
+							<nav>
+								<ul>
+									<li class="footer__link"><a href="#">Terms and Conditions</a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+					<div class="footer__social">
+						<h4>follow us</h4>
+						<div class="footer__social-icons">
+							<a href="#"><img src="src/img/icons/facebook.png" alt="facebook"/></a>
+							<a href="#"><img src="src/img/icons/instagram.png" alt="instagram"/></a>
+							<a href="#"><img src="src/img/icons/pinterest.png" alt="pinterest"/></a>
+						</div>
+					</div>
+				</div>
+				<div class="footer__copyright">© Copyright 2025, Ceramic soul</div>
+			</div>
+		</footer>
+		<script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+		<script type="module" src="/src/js/script.js"></script>
+		<script type="module" src="/src/js/form.js"></script>
+	</body>
+</html>
