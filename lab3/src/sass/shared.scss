@@ -1,0 +1,54 @@
+@use "/src/sass/base/variables.scss" as *;
+@use "/src/sass/base/mixins.scss" as *;
+
+.section__title {
+  color: $dark;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 60px;
+  font-size: $font-size-5;
+}
+
+.container {
+  width: 100%;
+  padding: 0 10px;
+  position: relative;
+}
+
+.section__subtitle {
+  @include title;
+  font-size: $font-size-3;
+}
+
+@media (min-width: $breakpoint-sm) {
+  .section__title {
+    font-size: $font-size-6;
+  }
+
+  .section__subtitle {
+    font-size: $font-size-4;
+  }
+
+  .container {
+    max-width: 720px;
+    padding: 0;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: $breakpoint-md) {
+  .section__title {
+    font-size: $font-size-7;
+  }
+
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: $breakpoint-xl) {
+  .container {
+    max-width: 1440px;
+  }
+}

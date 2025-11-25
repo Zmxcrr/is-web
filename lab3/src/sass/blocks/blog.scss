@@ -1,0 +1,112 @@
+@use "/src/sass/base/variables.scss" as *;
+@use "/src/sass/base/mixins.scss" as *;
+
+.blog {
+	padding-top: 50px;
+}
+
+.blog__wrapper {
+	margin-top: 60px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 40px;
+}
+
+.blog__card {
+	border: 1px solid $dark;
+	background: $light;
+	box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.blog__content {
+	display:flex;
+	flex-flow:row wrap;
+	align-content:flex-start;
+}
+
+.blog__content-column {
+	display: flex;
+	flex-direction: column;
+	gap: 25px;
+	padding: 25px 25px 0 25px;
+
+}
+
+.blog__img {
+	height: 240px;
+}
+
+.blog__content h3 {
+	font-size: $font-size-4;
+	font-weight: 500;
+	text-transform: uppercase;
+	text-align: left;
+}
+
+.blog__text {
+	margin-top: 25px;
+	padding: 0 25px 25px 25px;
+	color: $dark;
+	font-size: $font-size-2;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+
+.btn-read {
+	@include button;
+	width: 145px;
+	height: 32px;
+	font-size: $font-size-1;
+}
+
+@media (min-width: $breakpoint-sm) {
+	.blog__wrapper {
+		padding: 25px 25px 0 25px;
+		position: relative;
+	}
+
+	.blog__wrapper::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: $dark;
+		width: 1px;
+		height: 200px;
+	}
+	.blog__wrapper::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: $dark;
+		width: 200px;
+		height: 1px;
+	}
+
+	.blog__content-column {
+		justify-content: space-between;
+		width: 50%;
+	}
+
+	.blog__img-wrapper {
+		width: 50%;
+	}
+}
+
+@media (min-width: $breakpoint-md) {
+	.blog__card {
+		width: 520px;
+	}
+
+	.blog__wrapper {
+		align-items: flex-start;
+	}
+}
+
+@media (min-width: $breakpoint-xl) {
+	.blog__card {
+		width: 670px;
+	}
+}

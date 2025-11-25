@@ -1,0 +1,134 @@
+@use "/src/sass/base/variables.scss" as *;
+@use "/src/sass/base/mixins.scss" as *;
+
+.footer {
+	margin-top: 60px;
+	padding: 50px 0;
+	background-color: $dark;
+}
+
+.footer__text {
+	color: $light;
+	font-size: $font-size-2;
+	margin-top: 40px;
+}
+
+.footer__input {
+	margin-top: 40px;
+	width: 293px;
+	padding-bottom: 15px;
+	background-color: transparent;
+	box-shadow: none;
+	border: none;
+	border-bottom: 1px solid $ui-active;
+	font-size: $font-size-1;
+	color: $ui-active;
+}
+
+.footer__input::placeholder {
+	font-size: $font-size-1;
+	color: $ui-active;
+}
+
+.footer__checkbox-text {
+	display: flex;
+	align-items: center;
+	margin-top: 20px;
+	color: $light;
+	font-size: $font-size-1;
+}
+
+.footer__checkbox-text a {
+	margin-left: 3px;
+	text-decoration: none;
+	color: #a22dc6;
+}
+
+.footer__checkbox {
+	margin-right: 15px;
+}
+
+.footer__form-btn {
+	@include button;
+	margin-top: 20px;
+	width: 90px;
+	height: 40px;
+	font-size: $font-size-2;
+	color: $light;
+	border: 1px solid $light;
+}
+
+.footer__links {
+	margin-top: 40px;
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 70px;
+	row-gap: 40px;
+}
+
+.footer__links ul {
+	margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+	row-gap: 20px;
+	padding: 20px 0 0 0;
+	list-style-type: none;
+}
+
+.footer__link a{
+	color: $light;
+	font-size: $font-size-2;
+	text-decoration: none;
+}
+
+.footer__social {
+	margin-top: 40px;
+}
+
+.footer__social-icons {
+	margin-top: 40px;
+	display: flex;
+	column-gap: 10px;
+	padding: 0;
+	list-style-type: none;
+}
+
+.footer__copyright {
+	margin-top: 40px;
+	text-align: center;
+	color: $light;
+	font-size: $font-size-1;
+}
+
+.footer h4 {
+	color: $light;
+	font-size: $font-size-2;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+
+@media (min-width: $breakpoint-sm) {
+	.footer__wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	.footer__newsletter {
+		width: 100%;
+	}
+}
+
+@media (min-width: $breakpoint-md) {
+	.footer__newsletter {
+		width: auto;
+	}
+
+	.footer__social {
+		margin-top: 0;
+	}
+
+	.footer__links {
+		margin-top: 0;
+	}
+}
